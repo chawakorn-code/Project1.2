@@ -47,7 +47,7 @@ papedBot.on('message', async msg => {
                     userId: id,
                     startWork: Date.now()
                 })
-                msg.reply('บันทึกสำเร็จค่ะ มาทำงานเวลา : ' + moment().format('MMMM Do YYYY, h:mm:ss') + "อย่าลืมเวลาออกงาน พิมพ์ bye ด้วยนะคะ")
+                msg.reply('บันทึกสำเร็จค่ะ มาทำงานเวลา : ' + moment().format('MMMM Do YYYY, h:mm:ss') + "ออกงานอย่าลืม พิมพ์ bye ด้วยนะคะ")
                 break;
             case 'bye':
                 await Employee.create({
@@ -58,7 +58,7 @@ papedBot.on('message', async msg => {
                 msg.reply('บันทึกสำเร็จค่ะ ออกงานเวลา : ' + moment().format('MMMM Do YYYY, h:mm:ss'))
                 break;
             default:
-                msg.reply('บันทึกผิดพลาดค่ะ โปรดลองใหม่อีกครั้ง ต้องการ เข้างาน พิมพ์ check ออกงาน พิมพ์ bye')
+                msg.reply('บันทึกผิดพลาดค่ะ โปรดลองใหม่อีกครั้ง ต้องการ ( เข้างาน พิมพ์ check ) ||| ( ออกงาน พิมพ์ bye )')
                 break;
         }
 
