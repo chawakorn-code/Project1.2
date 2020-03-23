@@ -25,7 +25,7 @@ const Employee = mongoose.model('employee', employeeSchema)
 ///////////////////
 ///////// BOT /////
 ///////////////////
-papedBot.login('NjkwMjM1ODYzOTQyMTY4Njk2.XnOehA.tRZbTV02NEB8yLCVu6bmrWILfwM', () => {
+papedBot.login('', () => {  //////////// <<<<<<< อย่าลืมใส่ Token Bot ครับ
 }).catch((err) => console.log('err', err))
 
 papedBot.on('ready', () => {
@@ -37,9 +37,9 @@ papedBot.on('message', async msg => {
     const id = msg.author.discriminator
     const text = msg.content
     const currentChannel = msg.channel.id
-    const checkInChannel = '690221415928168469'
+    const checkInChannel = '' //////////// <<<<< ชื่อ channel ที่เราจะให้บอทอยู่
 
-    if(username !== 'ป้าเป็ด' && id !== '0060' && currentChannel === checkInChannel){
+    if(username !== '' && id !== '' && currentChannel === checkInChannel){ //////// <<<<< อย่าลืมใส่ username กับ id ของ บอท
         switch (text) {
             case 'check':
                 await Employee.create({
